@@ -1,0 +1,57 @@
+
+@url = http://localhost:3003
+
+@id = 6644205f5b603bb095ff1553
+
+
+### Get Menu Items 
+GET {{url}}/api/menuItem/
+
+### Get Events 
+GET {{url}}/api/Events/
+
+
+### Add menuItem 
+POST {{url}}/api/menuItem/
+Content-Type: application/json
+
+{
+	"itemName": "Food",
+	"itemDescription": "yum",
+	"itemPrice": "6.99"
+}
+
+### Add Event 
+POST {{url}}/api/Events/
+Content-Type: application/json
+
+{
+	"eventName": "Food",
+	"eventDate": "yum"
+}
+
+### Update menuItem 
+PUT {{url}}/api/menuItem/{{id}}
+Content-Type: application/json
+
+{
+	"itemName": "NOFoods",
+	"itemDescription": "yum",
+	"itemPrice": "6.99"
+}
+
+### Update event 
+PUT {{url}}/api/Events/{{id}}
+Content-Type: application/json
+
+{
+	"eventName": "NOFood",
+	"eventDate": "yum"
+}
+
+### Delete menuItem
+DELETE {{url}}/api/menuItem/{{id}}
+
+### Delete event
+DELETE {{url}}/api/Events/{{id}}
+
